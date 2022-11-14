@@ -10,7 +10,7 @@ services:
       - BASE_URL=$BASE_URL
       - EMAIL=$EMAIL
     volumes:
-      - ./nginx.conf:/web/nextcloud.conf
+      - ./nginx.conf:/web/gitea.conf
       - sites-availables:/sites-availables/
       - certs:/etc/letsencrypt/
 
@@ -48,6 +48,7 @@ services:
 
 volumes:
   data:
+  db:
   sites-availables:
     external: true
   certs:
